@@ -562,3 +562,16 @@ const debouncedScroll = debounce(() => {
 }, 100);
 
 window.addEventListener('scroll', debouncedScroll);
+
+// Scroll Progress Line
+const scrollProgress = document.querySelector('.scroll-progress');
+
+function updateScrollProgress() {
+    const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (window.scrollY / windowHeight) * 100;
+    scrollProgress.style.setProperty('--progress', `${scrolled}%`);
+    scrollProgress.style.height = `${scrolled}%`;
+}
+
+window.addEventListener('scroll', updateScrollProgress);
+window.addEventListener('resize', updateScrollProgress);
