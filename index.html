@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Furqan - AI Engineer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap">
+    <!-- Three.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading-animation" role="progressbar" aria-label="Loading portfolio" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="loader"></div>
+        <div class="loading-progress">
+            <div class="progress-bar"></div>
+        </div>
+        <p>Loading Portfolio...</p>
+    </div>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" aria-label="Toggle theme" tabindex="0">
+        <i class="fas fa-sun" aria-hidden="true"></i>
+        <i class="fas fa-moon" aria-hidden="true"></i>
+    </button>
+
+    <!-- Matrix-like background -->
+    <div class="matrix-bg" id="matrix-bg" aria-hidden="true"></div>
+
+    <!-- 3D Logo Canvas -->
+    <div class="logo-3d-container" aria-hidden="true">
+        <canvas id="logo-3d-canvas"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-content">
+            <div class="logo" role="banner">Muhammad Furqan<span class="logo-dot"></span></div>
+            <div class="mobile-menu-toggle" aria-label="Toggle menu" tabindex="0">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </div>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="#home" role="menuitem" tabindex="0">Home</a></li>
+                <li role="none"><a href="#about" role="menuitem" tabindex="0">About</a></li>
+                <li role="none"><a href="#projects" role="menuitem" tabindex="0">Projects</a></li>
+                <li role="none"><a href="#skills" role="menuitem" tabindex="0">Skills</a></li>
+                <li role="none"><a href="#certifications" role="menuitem" tabindex="0">Certifications</a></li>
+                <li role="none"><a href="#contact" role="menuitem" tabindex="0">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-greeting">Hello, I'm</div>
+            <h1>Muhammad Furqan</h1>
+            <h2>AI Engineer & Data Scientist</h2>
+            <p class="hero-text">Transforming complex AI concepts into practical solutions. Specializing in NLP, Computer Vision, and Cloud AI Engineering.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn primary">View My Work</a>
+                <a href="#contact" class="btn secondary">Get in Touch</a>
+            </div>
+            <div class="tech-stack-hero">
+                <span>Python</span>
+                <span>TensorFlow</span>
+                <span>PyTorch</span>
+                <span>AWS</span>
+                <span>NLP</span>
+            </div>
+        </div>
+        <div class="hero-decoration">
+            <div class="code-snippet">
+                <pre><code>def build_ai_solution():
+    model = Transformer(
+        layers=12,
+        heads=8,
+        d_model=768
+    )
+    return model.predict(
+        input_data,
+        confidence=0.95
+    )</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="about-intro">Hey 👋🏼 I'm Muhammad Furqan, a Junior AI Engineer based in Lahore, Pakistan 🇵🇰. With a strong passion for AI, machine learning, and cloud technologies, I thrive on building intelligent solutions that make a real-world impact.</p>
+                <p class="about-experience">I specialize in developing AI solutions that solve real-world problems. My expertise includes natural language processing, computer vision, and cloud-based AI deployments. I'm passionate about creating intelligent systems that can understand, learn, and adapt to complex scenarios.</p>
+                <p class="about-achievements">Throughout my career, I've worked on various AI projects, from developing chatbots and recommendation systems to implementing computer vision solutions for object detection and recognition. I'm constantly learning and exploring new technologies to stay at the forefront of AI innovation.</p>
+                <p class="about-personal">When I'm not coding or diving into AI research, I enjoy contributing to open-source projects, participating in AI competitions on Kaggle, and sharing my knowledge through technical blog posts and tutorials.</p>
+                <div class="about-cta">
+                    <a href="#contact" class="btn">Let's Connect <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section id="journey">
+        <div class="section-title">
+            <h2>My Journey</h2>
+        </div>
+        <div class="timeline-container">
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Junior AI Engineer</h3>
+                        <h4>Silicon Nexus</h4>
+                        <p class="timeline-date">Sep 2024 – Present</p>
+                        <p>Currently working on real-world AI solutions at Silicon Nexus.</p>
+                        <ul>
+                            <li>Built projects like a Business Analyst Chatbot, Crane Support Bot (Aurelia), a Math Question Generator, and an NCERT-based RAG system using FastAPI and AWS.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Data Science Trainee</h3>
+                        <h4>Knowledge Streams</h4>
+                        <p class="timeline-date">April 2024 – July 2024</p>
+                        <ul>
+                            <li>Worked on machine learning models, data preprocessing, and pipeline optimization.</li>
+                            <li>Handled large datasets and improved model performance through feature engineering.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Started Learning AI/ML</h3>
+                        <p class="timeline-date">Oct 2023 – March 2024</p>
+                        <p>Began my AI journey through online courses and projects, focusing on machine learning, deep learning, and data analysis fundamentals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <!-- Military Podcast -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-microphone-alt"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Military Podcast</h3>
+                    <p class="project-description">Military Podcast is an AI-driven platform built with LangChain and FastAPI, designed to transcribe and analyze military-related podcasts. The system leverages LangChain's document processing capabilities and FastAPI's high-performance API framework to enable efficient content discovery, semantic search, and meaningful insights extraction from audio data.</p>
+                    <div class="project-features">
+                        <ul>
+                            <li>LangChain-powered document processing and analysis</li>
+                            <li>FastAPI backend for high-performance API endpoints</li>
+                            <li>Semantic search with vector embeddings</li>
+                            <li>Custom LangChain chains for content analysis</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>LangChain</span>
+                        <span>FastAPI</span>
+                        <span>AWS</span>
+                        <span>NLP</span>
+                    </div>
+                    <a href="https://github.com/iammuhammadfurqan/military-podcast" target="_blank" class="project-link">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- MathWiz -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">MathWiz</h3>
+                    <p class="project-description">MathWiz is a personalized AI-powered math question generation platform built using LangChain and FastAPI. The system uses LangChain's LLM integration capabilities to generate adaptive math problems, while FastAPI provides a robust and scalable backend for real-time question generation and user interaction.</p>
+                    <div class="project-features">
+                        <ul>
+                            <li>LangChain-powered question generation</li>
+                            <li>FastAPI backend with async support</li>
+                            <li>Custom LangChain agents for problem-solving</li>
+                            <li>Real-time feedback system</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>LangChain</span>
+                        <span>FastAPI</span>
+                        <span>ML</span>
+                        <span>Docker</span>
+                    </div>
+                    <a href="https://github.com/iammuhammadfurqan/mathwiz" target="_blank" class="project-link">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Salah GPT -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-mosque"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Salah GPT</h3>
+                    <p class="project-description">Salah GPT is an Islamic assistant built using LangChain and FastAPI, leveraging large language models (LLMs) and natural language processing (NLP) techniques. The system uses LangChain's RAG capabilities for accurate Islamic knowledge retrieval and FastAPI for efficient API handling, providing real-time, context-aware responses to Islamic queries.</p>
+                    <div class="project-features">
+                        <ul>
+                            <li>LangChain RAG implementation for Islamic knowledge</li>
+                            <li>FastAPI backend with WebSocket support</li>
+                            <li>Custom LangChain chains for context handling</li>
+                            <li>Vector storage for efficient knowledge retrieval</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>LangChain</span>
+                        <span>FastAPI</span>
+                        <span>LLM</span>
+                        <span>RAG</span>
+                    </div>
+                    <a href="https://github.com/furqan899/Salah_GPT/blob/main/salah-gpt.py" target="_blank" class="project-link">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Healthcare Trends Analysis -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Healthcare Trends Analysis</h3>
+                    <p class="project-description">Healthcare Trends Analysis is a data-driven project focused on exploring and visualizing key trends in healthcare. Using advanced analytics and machine learning techniques, this project uncovers important insights related to healthcare costs, treatment efficacy, and the evolving needs of patients.</p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Data cleaning and preprocessing</li>
+                            <li>In-depth statistical analysis</li>
+                            <li>Interactive visualizations</li>
+                            <li>Predictive modeling</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Data Analysis</span>
+                        <span>Pandas</span>
+                        <span>Matplotlib</span>
+                    </div>
+                    <a href="https://www.kaggle.com/code/muhammadfurqan0/unlocking-healthcare-trends-data-analysis" target="_blank" class="project-link">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hourly Energy Forecasting -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Hourly Energy Forecasting</h3>
+                    <p class="project-description">Hourly Energy Forecasting is a machine learning project that focuses on predicting hourly energy consumption using time series data. The model leverages machine learning algorithms like ARIMA and LSTM to provide accurate forecasts for energy consumption, helping utilities optimize their resource management.</p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Time series forecasting with ML</li>
+                            <li>Energy consumption prediction</li>
+                            <li>LSTM for sequential data</li>
+                            <li>Data visualization of trends</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Time Series</span>
+                        <span>Forecasting</span>
+                        <span>Machine Learning</span>
+                    </div>
+                    <a href="https://www.kaggle.com/code/muhammadfurqan0/hourly-energy-forecasting-notebook" target="_blank" class="project-link">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- LangChain RAG System -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-link"></i>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">LangChain RAG System</h3>
+                    <p class="project-description">A sophisticated Retrieval-Augmented Generation (RAG) system built with LangChain, designed to provide accurate and context-aware responses by combining document retrieval with large language models.</p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Document ingestion and chunking</li>
+                            <li>Vector storage and retrieval</li>
+                            <li>Context-aware response generation</li>
+                            <li>Custom prompt engineering</li>
+                            <li>Memory management for conversation history</li>
+                        </ul>
+                    </div>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>LangChain</span>
+                        <span>LLM</span>
+                        <span>Vector DB</span>
+                        <span>RAG</span>
+                    </div>
+                    <a href="https://github.com/iammuhammadfurqan/Cold-Email-Generator" target="_blank" class="project-link">
+                        View Project <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills & Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3><i class="fas fa-brain"></i> AI/ML Skills</h3>
+                <div class="skills-icons">
+                    <div class="skill-icon" title="Deep Learning">
+                        <i class="fas fa-network-wired"></i>
+                        <span>Deep Learning</span>
+                    </div>
+                    <div class="skill-icon" title="Natural Language Processing">
+                        <i class="fas fa-comments"></i>
+                        <span>NLP</span>
+                    </div>
+                    <div class="skill-icon" title="Computer Vision">
+                        <i class="fas fa-eye"></i>
+                        <span>Computer Vision</span>
+                    </div>
+                    <div class="skill-icon" title="Generative AI">
+                        <i class="fas fa-robot"></i>
+                        <span>Generative AI</span>
+                    </div>
+                    <div class="skill-icon" title="Machine Learning">
+                        <i class="fas fa-microchip"></i>
+                        <span>Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-chart-line"></i> Data Science</h3>
+                <div class="skills-icons">
+                    <div class="skill-icon" title="Data Analysis">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Data Analysis</span>
+                    </div>
+                    <div class="skill-icon" title="Data Visualization">
+                        <i class="fas fa-chart-pie"></i>
+                        <span>Data Visualization</span>
+                    </div>
+                    <div class="skill-icon" title="Statistical Analysis">
+                        <i class="fas fa-calculator"></i>
+                        <span>Statistics</span>
+                    </div>
+                    <div class="skill-icon" title="Feature Engineering">
+                        <i class="fas fa-cogs"></i>
+                        <span>Feature Engineering</span>
+                    </div>
+                    <div class="skill-icon" title="Model Evaluation">
+                        <i class="fas fa-tasks"></i>
+                        <span>Model Evaluation</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Programming & Tools</h3>
+                <div class="skills-icons">
+                    <div class="skill-icon" title="Python">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-icon" title="FastAPI">
+                        <i class="fas fa-bolt"></i>
+                        <span>FastAPI</span>
+                    </div>
+                    <div class="skill-icon" title="LangChain">
+                        <i class="fas fa-link"></i>
+                        <span>LangChain</span>
+                    </div>
+                    <div class="skill-icon" title="SQL">
+                        <i class="fas fa-database"></i>
+                        <span>SQL</span>
+                    </div>
+                    <div class="skill-icon" title="Pandas & NumPy">
+                        <i class="fas fa-table"></i>
+                        <span>Pandas & NumPy</span>
+                    </div>
+                    <div class="skill-icon" title="Scikit-learn & TensorFlow">
+                        <i class="fas fa-brain"></i>
+                        <span>Scikit-learn & TF</span>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-cloud"></i> Cloud & AWS</h3>
+                <div class="skills-icons">
+                    <div class="skill-icon" title="AWS Cloud Practitioner">
+                        <i class="fab fa-aws"></i>
+                        <span>AWS Cloud</span>
+                    </div>
+                    <div class="skill-icon" title="AWS Machine Learning">
+                        <i class="fas fa-brain"></i>
+                        <span>AWS ML</span>
+                    </div>
+                    <div class="skill-icon" title="AWS S3 & EC2">
+                        <i class="fas fa-server"></i>
+                        <span>S3 & EC2</span>
+                    </div>
+                    <div class="skill-icon" title="Cloud Architecture">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>Cloud Architecture</span>
+                    </div>
+                    <div class="skill-icon" title="Serverless Computing">
+                        <i class="fas fa-cloud"></i>
+                        <span>Serverless</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-grid">
+            <div class="cert-card">
+                <i class="fas fa-certificate"></i>
+                <h3>Data Science Specialization</h3>
+                <p>Comprehensive data science program covering statistical analysis, machine learning, and data visualization</p>
+                <div class="cert-date">2024</div>
+                <a href="https://www.coursera.org/account/accomplishments/specialization/CANVLL9WPW5F" target="_blank" class="cert-link">
+                    <span>View Certificate</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+            <div class="cert-card">
+                <i class="fas fa-brain"></i>
+                <h3>Machine Learning Specialization</h3>
+                <p>Advanced machine learning algorithms, neural networks, and deep learning applications</p>
+                <div class="cert-date">2023</div>
+                <a href="https://www.coursera.org/account/accomplishments/specialization/FGWTCY6PNMRR" target="_blank" class="cert-link">
+                    <span>View Certificate</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+            <div class="cert-card">
+                <i class="fas fa-robot"></i>
+                <h3>Generative AI for Everyone</h3>
+                <p>DeepLearning.AI course on generative AI applications and implementation strategies</p>
+                <div class="cert-date">2023</div>
+                <a href="https://www.coursera.org/account/accomplishments/verify/3N9UQM6TBH64" target="_blank" class="cert-link">
+                    <span>View Certificate</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+            <div class="cert-card">
+                <i class="fab fa-aws"></i>
+                <h3>AWS Cloud Practitioner</h3>
+                <p>Foundational AWS cloud services and architecture principles</p>
+                <div class="cert-date">2025</div>
+                <a href="https://drive.google.com/file/d/1JYCBlpjxN05K-Kcn-nwO5N0yOzgnYvMT/view?usp=sharing" target="_blank" class="cert-link">
+                    <span>View Certificate</span>
+                    <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+            <div class="cert-card">
+                <i class="fab fa-python"></i>
+                <h3>Data Analysis with Python</h3>
+                <p>FreeCodeCamp</p>
+                <div class="cert-date">2024</div>
+                <a href="https://www.freecodecamp.org/certification/iammuhammadfurqan/data-analysis-with-python-v7" class="cert-link" target="_blank">
+                    View Certificate <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+
+            <div class="cert-card">
+                <i class="fas fa-calculator"></i>
+                <h3>Linear Algebra for Machine Learning</h3>
+                <p>DeepLearning.AI</p>
+                <div class="cert-date">2024</div>
+                <a href="https://www.coursera.org/account/accomplishments/verify/LX65F78LZSLS" class="cert-link" target="_blank">
+                    View Certificate <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-content">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Connect with me professionally</p>
+                    <a href="https://www.linkedin.com/in/immuhammadfurqan/" target="_blank" class="contact-link">
+                        <span>View Profile</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Check out my code repositories</p>
+                    <a href="http://github.com/iammuhammadfurqan" target="_blank" class="contact-link">
+                        <span>View Profile</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-kaggle"></i>
+                    </div>
+                    <h3>Kaggle</h3>
+                    <p>Explore my data science projects</p>
+                    <a href="https://www.kaggle.com/muhammadfurqan0" target="_blank" class="contact-link">
+                        <span>View Profile</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>LeetCode</h3>
+                    <p>See my problem-solving journey</p>
+                    <a href="https://leetcode.com/u/immuhammadfurqan/" target="_blank" class="contact-link">
+                        <span>View Profile</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Credly</h3>
+                    <p>View my professional certifications</p>
+                    <a href="https://www.credly.com/users/immuhammadfurqan" target="_blank" class="contact-link">
+                        <span>View Badges</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>Let's discuss opportunities</p>
+                    <a href="mailto:muhammadfurqan0100@gmail.com" class="contact-link">
+                        <span>Send Email</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <h3>Send Me a Message</h3>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+            
+            <div class="resume-download">
+                <a href="https://drive.google.com/file/d/1bK338xPCApu4dNgA9Offisi-vymry_ZA/view?usp=sharing" class="btn primary" target="_blank">
+                    <i class="fas fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Muhammad Furqan. All rights reserved.</p>
+        <div class="footer-tech">
+            <span>AI</span>
+            <span>ML</span>
+            <span>NLP</span>
+            <span>Cloud</span>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" aria-label="Scroll to top" tabindex="0">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script src="logo-animation.js"></script>
+    <script src="particle-effects.js"></script>
+    <script src="matrix-rain.js"></script>
+    <div class="effects-container">
+        <!-- Particle and Matrix effects will be rendered here -->
+    </div>
+</body>
+</html> 
