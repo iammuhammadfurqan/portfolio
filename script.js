@@ -39,15 +39,44 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000);
     }
     
-    if (heroTitle) {
-        setTimeout(() => {
-            typeEffect(heroTitle, "AI Engineer & Data Scientist", 100);
-        }, 2000);
+    // Hero section animation: only h2 animates, hero-text appears after first h2 animation
+    const texts = ["AI Engineer & Data Scientist", "I love to Code AI with AI"];
+    let currentIndex = 0;
+
+    // Hide hero-text initially
+    if (heroText) heroText.style.opacity = '0';
+
+    function typePhrase(phrase, i = 0, cb) {
+        if (i === 0) heroTitle.textContent = '';
+        if (i < phrase.length) {
+            heroTitle.textContent += phrase.charAt(i);
+            setTimeout(() => typePhrase(phrase, i + 1, cb), 60);
+        } else if (cb) {
+            cb();
+        }
     }
+
+    function cycleTitle() {
+        heroTitle.style.opacity = '1';
+        typePhrase(texts[currentIndex], 0, () => {
+            setTimeout(() => {
+                heroTitle.style.opacity = '0';
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % texts.length;
+                    heroTitle.textContent = '';
+                    heroTitle.style.opacity = '1';
+                    setTimeout(cycleTitle, 200);
+                }, 400); // fade out duration
+            }, 2000); // visible time after typing
+        });
+    }
+    heroTitle.style.opacity = '1';
+    heroTitle.style.transition = 'opacity 0.4s';
+    setTimeout(cycleTitle, 1000);
     
     if (heroText) {
         setTimeout(() => {
-            typeEffect(heroText, "Passionate about creating intelligent systems and solving complex problems through AI and data science.", 50);
+            typeEffect(heroText, "Transforming complex AI concepts into practical solutions. Specializing in NLP, Computer Vision, and Cloud AI Engineering.", 50);
         }, 3000);
     }
     

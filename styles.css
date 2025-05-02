@@ -2368,3 +2368,10 @@ button:hover, a:hover {
         width: 3px;
     }
 } 
+.hero h2 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    transition: opacity 0.4s !important;
+}
